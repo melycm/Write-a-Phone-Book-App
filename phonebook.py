@@ -29,17 +29,18 @@ while menuchoice != 5:
         name = input("Name: ")
         if name in numbers:
             del numbers[name]
-            print("Entry deleted for {}.\n".format(name))
+            print("Deleted entry for {}.\n".format(name))
         else:
             print(name, "was not found")
         menu()
     elif menuchoice == 4:
         name = input("Name: ")
         if name in numbers:
-            print("Number: ", numbers[name])
+            print("Found entry for {}: ".format(name), numbers[name])
         else:
             print(name, "not found")
         menu()
     elif menuchoice != 5:
+        print("Bye!")
         menu()
         break
